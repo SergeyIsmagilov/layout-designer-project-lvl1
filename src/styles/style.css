@@ -1,7 +1,119 @@
-/** CSS STYLE **/
+/*
+В этой заметке я буду отслежывать свой прогресс понимания методологий OOCSS и Atomic CSS,
+которые необходимо использовать в рамках текущего проекта.
+Статус до начала разработки:
+Кажется, смысл в том, чтобы создать как можно больше переиспользуемых классов.
+Буквально для каждого используемого в проекте свойства.
+*/
 
-.hello {
-  display: block;
+/* !Названия классов будут сокращены в будущем! */
 
+/* Свойства позиционирования */
+
+/* Свойства, определяющие box-model */
+
+.content-width {
+  width: 1110px;
+}
+
+.section-center {
+  display: flex;
+  justify-content: center;
+}
+
+.padding-tb-100 {
+  padding: 100px 0;
+}
+
+/* Свойства типографики */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: Neucha;
+  src: url("../fonts/Neucha-Regular.ttf");
+}
+
+.font-main {
+  font-family: "Open Sans", sans-serif;
+}
+
+.font-head {
+  font-family: Neucha, cursive;
+}
+
+.font-size-main {
+  font-size: 16px;
+}
+
+.line-height-main {
+  line-height: 1.6em;
+}
+
+.line-height-head {
+  line-height: 1.2em;
+}
+
+.font-size-h1 {
+  font-size: 72px;
+}
+
+.font-size-h2 {
+  font-size: 60px;
+}
+
+.font-size-h3 {
+  font-size: 34px;
+}
+
+/* !Ниже есть такой же цвет!
+   !Этот нужно будет удалить! */
+
+.font-color {
+  color: #2a2626;
+}
+
+/* Свойства, определяющие визуальный вид */
+
+.color-white {
   color: #fff;
 }
+
+.color-whitehalf {
+  color: #d7ccc0;
+}
+
+.color-light {
+  color: #f5f4f0;
+}
+
+.color-main {
+  color: #fe8a02;
+}
+
+.color-maindark {
+  color: #42413c;
+}
+
+.color-dark {
+  color: #2a2626;
+}
+
+.color-darkhalf {
+  color: #908d8b;
+}
+
+.color-brown {
+  color: #b09a81;
+}
+
+.color-blue {
+  color: #1085c5;
+}
+
+/* Свойства анимации */
+
+/* Свойства, не попавшие ни в одну категорию */
