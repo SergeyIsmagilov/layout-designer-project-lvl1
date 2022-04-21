@@ -4,25 +4,71 @@
 Статус до начала разработки:
 Кажется, смысл в том, чтобы создать как можно больше переиспользуемых классов.
 Буквально для каждого используемого в проекте свойства.
+Upd: Сложно понять методологию, когда совсем нет опыта. Нужно "набить руку", посмотреть,
+как работают в компании, в которую я устроюсь. Я потрачу слишком много времени,
+если буду уделять этому особенно пристальное внимание. Пока буду записывать всё так,
+как мне сейчас кажется удобным.
 */
 
 /* !Названия классов будут сокращены в будущем! */
 
+:root {
+  --white: #fff;
+  --whitehalf: #d7ccc0;
+  --light: #f5f4f0;
+  --main: #fe8a02;
+  --maindark: #42413c;
+  --dark: #2a2626;
+  --darkhalf: #908d8b;
+  --brown: #b09a81;
+  --blue: #1085c5;
+  --hover: #ea7600;
+}
+
 /* Свойства позиционирования */
+
+.position-relative {
+  position: relative;
+}
+
+.position-header-img {
+  position: absolute;
+  top: 55px;
+  right: -270px;
+  z-index: -10;
+
+  height: 525px;
+}
 
 /* Свойства, определяющие box-model */
 
-.content-width {
-  width: 1110px;
+.flex-space {
+  display: flex;
+  justify-content: space-between;
 }
 
-.section-center {
-  display: flex;
-  justify-content: center;
+.block-width {
+  width: 540px;
 }
 
 .padding-tb-100 {
   padding: 100px 0;
+}
+
+.max-width {
+  max-width: 1110px;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.margin-top-185 {
+  margin-top: 185px;
 }
 
 /* Свойства типографики */
@@ -38,82 +84,92 @@
 }
 
 .font-main {
+  font-size: 16px;
   font-family: "Open Sans", sans-serif;
+  line-height: 1.6em;
 }
 
 .font-head {
   font-family: Neucha, cursive;
-}
-
-.font-size-main {
-  font-size: 16px;
-}
-
-.line-height-main {
-  line-height: 1.6em;
-}
-
-.line-height-head {
   line-height: 1.2em;
 }
 
-.font-size-h1 {
+h1 {
   font-size: 72px;
 }
 
-.font-size-h2 {
+h2 {
   font-size: 60px;
 }
 
-.font-size-h3 {
+h3 {
   font-size: 34px;
-}
-
-/* !Ниже есть такой же цвет!
-   !Этот нужно будет удалить! */
-
-.font-color {
-  color: #2a2626;
 }
 
 /* Свойства, определяющие визуальный вид */
 
-.color-white {
-  color: #fff;
+.bg {
+  position: relative;
 }
 
-.color-whitehalf {
-  color: #d7ccc0;
-}
+.bg::before {
+  position: absolute;
+  z-index: -100;
 
-.color-light {
-  color: #f5f4f0;
-}
+  width: 100%;
+  height: 100%;
 
-.color-main {
-  color: #fe8a02;
-}
+  background-color: var(--brown);
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.color-maindark {
-  color: #42413c;
-}
+  opacity: 0.1;
 
-.color-dark {
-  color: #2a2626;
-}
-
-.color-darkhalf {
-  color: #908d8b;
-}
-
-.color-brown {
-  color: #b09a81;
-}
-
-.color-blue {
-  color: #1085c5;
+  content: "";
 }
 
 /* Свойства анимации */
 
 /* Свойства, не попавшие ни в одну категорию */
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.button {
+  position: absolute;
+  top: 765px;
+  left: 570px;
+
+  padding: 12px 24px;
+
+  color: var(--white);
+  font-weight: bold;
+
+  background-color: var(--main);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--white);
+}
+
+.button:hover {
+  background-color: var(--hover);
+}
+
+.color-head {
+  color: var(--main);
+}
+
+.color-head-2 {
+  color: var(--dark);
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
