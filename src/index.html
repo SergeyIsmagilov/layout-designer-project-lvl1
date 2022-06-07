@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Проект Когнитивные искажения by sergey_ismagilov</title>
-
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="margin-0 font-main">
     <header class="bg overflow-hidden">
-<!--div?--> <section class="max-width margin-center position-relative padding-tb-100">
+        <div class="max-width margin-center position-relative padding-tb-100">
             <h1 class="font-head margin-0">
                 <span class="color-head">
                     Когнитивные<br>
@@ -19,19 +18,15 @@
                 в программировании
             </h1>
             <img class="position-header-img" src="./images/main.png" alt="">
-            <div class="flex-space margin-top-180">
-                <div class="block-width">
-                <p>Мы, разработчики, часто сталкиваемся с проблемами, которые идут вразрез с нашей продуктивностью. Но мы часто игнорируем целостную картину. Некоторые из этих проблем малозаметны, некоторые существенны. Иногда с ними можно как-то справиться, а иногда, к сожалению, нет.</p>
-                </div>
-                <div class="block-width">
-                <p>Вместе они формируют что-то вроде замкнутого цикла, и это может привести к длительной потере продуктивности, багам и бесконечному разочарованию.</p>
-                <p class="margin-bottom-40">Если мы сможем минимизировать воздействие одного или нескольких из этих факторов, то сможем сломать и цикл, а остатки нейтрализовать.</p>
-                <div class="button">
-                    <a class="details" href="">ПОДРОБНЕЕ</a>
-                </div>
+            <div class="columns margin-top-200"> <!--columns-->
+                <p class="margin-0">Мы, разработчики, часто сталкиваемся с проблемами, которые идут вразрез с нашей продуктивностью. Но мы часто игнорируем целостную картину. Некоторые из этих проблем малозаметны, некоторые существенны. Иногда с ними можно как-то справиться, а иногда, к сожалению, нет.</p>
+                <div class="break-inside-avoid">
+                    <p class="margin-0">Вместе они формируют что-то вроде замкнутого цикла, и это может привести к длительной потере продуктивности, багам и бесконечному разочарованию.</p>
+                    <p class="margin-0 margin-top-15-0-0">Если мы сможем минимизировать воздействие одного или нескольких из этих факторов, то сможем сломать и цикл, а остатки нейтрализовать.</p>
+                    <a class="button details margin-top-40" href="#navigation">ПОДРОБНЕЕ</a> <!--сделать весь блок ссылкой?-->
                 </div>
             </div>
-        </section>
+        </div>
     </header>
     <main>
         <section>
@@ -44,8 +39,8 @@
                 <iframe class="video" width="919" height="569" src="https://www.youtube.com/embed/jie9AizBqss" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
-        <section class="background"> <!--Тег nav вместо тега section?-->
-<!--id-->   <div id="navigation" class="flex-container max-width margin-center position-relative padding-tb-200-100">
+        <nav id="navigation" class="background">
+            <div class="flex-container max-width margin-center position-relative padding-tb-200-100">
                 <div class="card-header">
                     <h2 class="card-head font-head">
                         <span class="color-head">5 когнитивных искажений<br></span>
@@ -56,35 +51,35 @@
                     <p class="numbers">1</p>
                     <h3 class="color-head font-head">Эффект ИКЕА</h3>
                     <p class="card-p">Вы переоцениваете собственные решения, и, как следствие, недооцениваете решения других.</p>
-                    <a class="fill" href=""></a>
+                    <a class="fill" href="#ikea-effect"></a>
                 </div>
                 <div class="card-width card-background">
                     <p class="numbers">2</p>
                     <h3 class="color-head font-head">Преждевременная оптимизация</h3>
                     <p class="card-p">Вы оптимизируете что-то задолго до того, как в этом появляется необходимость.</p>
-                    <a class="fill" href=""></a>
+                    <a class="fill" href="#premature-optimization"></a>
                 </div>
                 <div class="card-width card-background">
                     <p class="numbers">3</p>
                     <h3 class="color-head font-head">Искажение новизны</h3>
                     <p class="card-p">Вы даёте более высокую оценку тем событиям, которые произошли недавно, и недооцениваете более старые.</p>
-                    <a class="fill" href=""></a>
+                    <a class="fill" href="#distortion-of-novelty"></a>
                 </div>
                 <div class="card-width card-background">
                     <p class="numbers">4</p>
                     <h3 class="color-head font-head">Гиперболическое обесценивание</h3>
                     <p class="card-p">Вы гонитесь за немедленной маленькой выгодой и игнорируете более крупную, недоступную сейчас, но доступную в будущем.</p>
-                    <a class="fill" href=""></a>
+                    <a class="fill" href="#hyperbolic-depreciation"></a>
                 </div>
                 <div class="card-width card-background">
                     <p class="numbers">5</p>
                     <h3 class="color-head font-head">Ошибка планирования</h3>
                     <p class="card-p">Неправильно рассчитывать время необходимое для завершения задачи.</p>
-                    <a class="fill" href=""></a>
+                    <a class="fill" href="#errors-in-planning"></a>
                 </div>
             </div>
-        </section>
-        <section class="bg"> <!--id="ikea-effect"-->
+        </nav>
+        <section id="ikea-effect" class="bg">
             <div class="max-width margin-center padding-tb-100">
                 <div class="columns display-flex">
                     <div>
@@ -100,13 +95,13 @@
                     <h4 class="color-white padding-5-10">КАК ПРОЯВЛЯЕТСЯ</h4>
                 </div>
                 <div class="columns">
-                    <p class="margin-0-0-26">Когнитивное искажение называется так из-за того, что потребители зачастую предпочитают покупать товары, которые они могут собрать сами, а не уже собранные кем-то.</p>
-                    <p class="margin-0">Мы склонны переоцнивать наши собственные решения и недооценивать решения других. Если вы когда-то работали в компании, которая использовала тупой внутренний инструмент вместо более удобного готового решения, вы понимаете, о чём я говорю.</p>
+                    <p class="margin-0">Когнитивное искажение называется так из-за того, что потребители зачастую предпочитают покупать товары, которые они могут собрать сами, а не уже собранные кем-то.</p>
+                    <p class="margin-0 break-inside-avoid">Мы склонны переоцнивать наши собственные решения и недооценивать решения других. Если вы когда-то работали в компании, которая использовала тупой внутренний инструмент вместо более удобного готового решения, вы понимаете, о чём я говорю.</p>
                 </div>
             </div>
         </section>
-        <section class="bg-brown color-white"> <!--id="premature-optimization"--> <!--стандартные стили-->
-            <div class="bg-image">
+        <section class="bg-brown color-white"> <!--стандартные стили-->
+            <div id="premature-optimization" class="bg-image">
                 <div class="max-width margin-center padding-tb-100">
                     <div class="columns display-flex">
                         <div>
@@ -128,7 +123,7 @@
                 </div>
             </div>
         </section>
-        <section class="bg"> <!--id="distortion-of-novelty"-->
+        <section id="distortion-of-novelty" class="bg">
             <div class="max-width margin-center padding-tb-100">
                 <div class="columns display-flex">
                     <div>
@@ -149,8 +144,8 @@
                 </div>
             </div>
         </section>
-        <section class="bg-brown color-white"> <!--id="hyperbolic-depreciation"-->
-            <div class="bg-image">
+        <section class="bg-brown color-white">
+            <div id="hyperbolic-depreciation" class="bg-image">
                 <div class="max-width margin-center padding-tb-100">
                     <div class="columns display-flex">
                         <div>
@@ -167,12 +162,12 @@
                     </div>
                     <div class="columns">
                         <p class="margin-0">Вы когда-нибудь откладывали написание теста? Ловили себя на использовании клавиш-стрелок в Vim? Поздравляю, у вас наблюдается гиперболическое обесценивание.</p>
-                        <p class="margin-top-60">Немедленная выгода от использования чего-то быстродоступного значительно смягчает боль, которую нужно перетерпеть, чтобы усвоить правильный синтаксис для перемещения на нужную строчку. Но как только вы поймёте как перемещаться быстрее, выгода в будущем намного выше. В итоге вы сохраните много времени.</p>
+                        <p class="margin-0 break-inside-avoid">Немедленная выгода от использования чего-то быстродоступного значительно смягчает боль, которую нужно перетерпеть, чтобы усвоить правильный синтаксис для перемещения на нужную строчку. Но как только вы поймёте как перемещаться быстрее, выгода в будущем намного выше. В итоге вы сохраните много времени.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="bg"> <!--id=""-->
+        <section id="errors-in-planning" class="bg">
             <div class="max-width margin-center padding-tb-100">
                 <div class="columns display-flex">
                     <div>
@@ -190,11 +185,29 @@
                 <div class="columns">
                     <p class="margin-0">Одно из искажений, которое должно признать большинство из нас. И менеджеры проекта, и сами пользователи продукта — все склонны ставить сроки, в которые невозможно закончить запланированное.</p>
                     <p class="margin-0">Это отлично выражается в старом афоризме:</p>
-                    <p class="margin-top-15">Первые 90% готового кода отнимают первые 90% времени разработки. Оставшиеся 10% отнимают вторые 90% времени разработки.</p>
+                    <p class="margin-top-15-0-0">Первые 90% готового кода отнимают первые 90% времени разработки. Оставшиеся 10% отнимают вторые 90% времени разработки.</p>
                 </div>
             </div>
         </section>
     </main>
-    <footer></footer>
+    <footer class="max-width margin-center padding-tb-100">
+        <!--Поле ввода-->
+        <div class="footer-flex background-maindark color-white"> <!--Колонки или флексы?-->
+            <h3 class="font-head margin-55">Хотите узнать больше?<br>Подпишитесь на обновления</h3>
+            <div class="email-form">
+                <p class="font-size-18 margin-top-38-bottom-9">Электронная почта</p> <!--Исправить позиционирование-->
+                <form class="form-flex">
+                    <input class="input border-0" type="email" placeholder="Ваша электронная почта">
+                    <button class="send border-0"></button>
+                </form>
+                <p class="margin-0 font-size-12">Подписываясь, вы принимаете <a class="color-white" href="#">правила сервиса</a></p>
+            </div>
+        </div>
+        <div class="text-align-center margin-top-70">
+            <p>© 2022 Сергей Исмагилов</p>
+            <p>По материалам статьи <a href="https://medium.com/hackernoon/cognitive-biases-in-programming-5e937707c27b">Yash Ranadive Cognitive Biases in Programming</a></p>
+            <p><a href="https://ru.hexlet.io/">Курсы программирования Hexlet</a></p>
+        </div>
+    </footer>
 </body>
 </html>
