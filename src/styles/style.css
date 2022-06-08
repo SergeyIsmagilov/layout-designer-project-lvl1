@@ -66,3 +66,83 @@ h4 {
   max-width: 1110px;
   margin: 0 auto; /* есть более правильный способ выровнять блок по центру страницы? есть проблемы с этим? */
 }
+
+.bg-light {
+  position: relative;
+}
+
+.bg-light::before {
+  position: absolute;
+  z-index: -100;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--brown);
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+
+  content: "";
+}
+
+/* по какой логике группировать классы??? */
+
+.columns-bottom {
+  columns: 2;
+  column-gap: 30px;
+}
+
+.columns-bottom > div {
+  break-inside: avoid;
+}
+
+.color-main {
+  color: var(--mainblack);
+}
+
+header {
+  overflow: hidden;
+}
+
+.img-header {
+  position: absolute;
+  top: 55px;
+  right: -270px;
+  z-index: -10;
+
+  height: 525px;
+}
+
+.relative {
+  position: relative;
+}
+
+.padding-tb-100 {
+  padding: 100px 0;
+}
+
+.margin-top-200 { /* как назвать этот класс и подобные? */
+  margin-top: 200px;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.details {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+
+  background-color: var(--orange);
+}
+
+.details:hover {
+  background-color: var(--orange-hover);
+}
