@@ -1,11 +1,11 @@
 :root {
   --white: #fff;
-  --whitehalf: #d7ccc0;
+  --white-half: #d7ccc0;
   --light: #f5f4f0;
   --orange: #fe8a02;
-  --maindark: #42413c;
-  --mainblack: #2a2626;
-  --darkhalf: #908d8b;
+  --main-dark: #42413c;
+  --main-black: #2a2626;
+  --dark-half: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
   --orange-hover: #ea7600;
@@ -28,7 +28,7 @@
 }
 
 body {
-  color: var(--mainblack);
+  color: var(--main-black);
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6em;
@@ -99,7 +99,7 @@ h4 {
 }
 
 .color-main {
-  color: var(--mainblack);
+  color: var(--main-black);
 }
 
 header {
