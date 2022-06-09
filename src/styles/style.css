@@ -64,7 +64,7 @@ h4 {
 
 .container {
   max-width: 1110px;
-  margin: 0 auto; /* есть более правильный способ выровнять блок по центру страницы? есть проблемы с этим? */
+  margin: 0 auto;
 }
 
 .bg-light {
@@ -119,15 +119,15 @@ header {
   position: relative;
 }
 
-.padding-tb-100 {
+.py-100 {
   padding: 100px 0;
 }
 
-.margin-top-200 { /* как назвать этот класс и подобные? */
+.mt-200 {
   margin-top: 200px;
 }
 
-.margin-top-15 {
+.mt-15 {
   margin-top: 15px;
 }
 
