@@ -1,24 +1,68 @@
-:root { /* дать названия переменным, ориентируясь на то, где они будут использованы? */
+:root {
   --white: #fff;
   --whitehalf: #d7ccc0;
   --light: #f5f4f0;
-  --main: #fe8a02;
+  --orange: #fe8a02;
   --maindark: #42413c;
-  --dark: #2a2626;
+  --mainblack: #2a2626;
   --darkhalf: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
-  --hover: #ea7600;
+  --orange-hover: #ea7600;
 }
 
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Neucha;
   src: url("../fonts/Neucha-Regular.ttf");
+  font-display: swap;
 }
 
-/* обнулить внешние отступы по умолчанию? */
+* {
+  margin: 0;
+}
+
+body {
+  color: var(--mainblack);
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6em;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--orange);
+  font-weight: 400;
+  font-family: Neucha, cursive;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: Neucha, cursive;
+  line-height: 1.2em;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto; /* есть более правильный способ выровнять блок по центру страницы? есть проблемы с этим? */
+}
