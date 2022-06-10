@@ -1,3 +1,5 @@
+/* base */
+
 :root {
   --white: #fff;
   --white-half: #d7ccc0;
@@ -62,6 +64,30 @@ h4 {
   line-height: 1.2em;
 }
 
+/* utils */
+
+.color-main {
+  color: var(--main-black);
+}
+
+.relative {
+  position: relative;
+}
+
+.py-100 {
+  padding: 100px 0;
+}
+
+.mt-200 {
+  margin-top: 200px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+/* "block name" */
+
 .container {
   max-width: 1110px;
   margin: 0 auto;
@@ -87,8 +113,6 @@ h4 {
   content: "";
 }
 
-/* по какой логике группировать классы??? */
-
 .columns-bottom {
   columns: 2;
   column-gap: 30px;
@@ -96,10 +120,6 @@ h4 {
 
 .columns-bottom > div {
   break-inside: avoid;
-}
-
-.color-main {
-  color: var(--main-black);
 }
 
 header {
@@ -113,22 +133,6 @@ header {
   z-index: -10;
 
   height: 525px;
-}
-
-.relative {
-  position: relative;
-}
-
-.py-100 {
-  padding: 100px 0;
-}
-
-.mt-200 {
-  margin-top: 200px;
-}
-
-.mt-15 {
-  margin-top: 15px;
 }
 
 .details {
