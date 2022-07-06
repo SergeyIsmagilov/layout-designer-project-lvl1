@@ -86,7 +86,15 @@ h4 {
   margin-top: 15px;
 }
 
-/* "block name" */
+.mt-30 {
+  margin-top: 30px;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+/* context */
 
 .container {
   max-width: 1110px;
@@ -150,4 +158,11 @@ header {
 
 .details:hover {
   background-color: var(--orange-hover);
+}
+
+.displacement {
+  position: relative;
+  top: 100px;
+
+  text-align: center;
 }
