@@ -1,11 +1,13 @@
+/* base */
+
 :root {
   --white: #fff;
-  --whitehalf: #d7ccc0;
+  --white-half: #d7ccc0;
   --light: #f5f4f0;
   --orange: #fe8a02;
-  --maindark: #42413c;
-  --mainblack: #2a2626;
-  --darkhalf: #908d8b;
+  --main-dark: #42413c;
+  --main-black: #2a2626;
+  --dark-half: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
   --orange-hover: #ea7600;
@@ -28,7 +30,7 @@
 }
 
 body {
-  color: var(--mainblack);
+  color: var(--main-black);
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6em;
@@ -62,7 +64,90 @@ h4 {
   line-height: 1.2em;
 }
 
+/* utils */
+
+.color-main {
+  color: var(--main-black);
+}
+
+.relative {
+  position: relative;
+}
+
+.py-100 {
+  padding: 100px 0;
+}
+
+.mt-200 {
+  margin-top: 200px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+/* "block name" */
+
 .container {
   max-width: 1110px;
-  margin: 0 auto; /* есть более правильный способ выровнять блок по центру страницы? есть проблемы с этим? */
+  margin: 0 auto;
+}
+
+.bg-light {
+  position: relative;
+}
+
+.bg-light::before {
+  position: absolute;
+  z-index: -100;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--brown);
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.1;
+
+  content: "";
+}
+
+.columns-bottom {
+  columns: 2;
+  column-gap: 30px;
+}
+
+.columns-bottom > div {
+  break-inside: avoid;
+}
+
+header {
+  overflow: hidden;
+}
+
+.img-header {
+  position: absolute;
+  top: 55px;
+  right: -270px;
+  z-index: -10;
+
+  height: 525px;
+}
+
+.details {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 12px 24px;
+
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: var(--orange);
+}
+
+.details:hover {
+  background-color: var(--orange-hover);
 }
