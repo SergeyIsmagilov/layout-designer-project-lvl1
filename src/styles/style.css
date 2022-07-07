@@ -70,12 +70,32 @@ h4 {
   position: relative;
 }
 
+.flex {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap-20-30 {
+  gap: 20px 30px;
+}
+
 .drop-shadow {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
 .color-main {
   color: var(--main-black);
+}
+
+.color-white {
+  color: var(--white);
+}
+
+.mt-12 {
+  margin-top: 12px;
 }
 
 .mt-15 {
@@ -102,8 +122,28 @@ h4 {
   padding-top: 100px;
 }
 
+.pt-200 {
+  padding-top: 200px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.width-350 {
+  width: 350px;
+}
+
 .text-center {
   text-align: center;
+}
+
+.font-52 {
+  font-size: 52px;
 }
 
 /* context */
@@ -131,6 +171,10 @@ h4 {
   opacity: 0.1;
 
   content: "";
+}
+
+.bg-dark {
+  background-color: var(--main-dark);
 }
 
 .columns-bottom {
@@ -170,4 +214,40 @@ header {
 
 .details:hover {
   background-color: var(--orange-hover);
+}
+
+.card {
+  position: relative;
+
+  width: 302px;
+  padding: 24px;
+
+  background: var(--light);
+}
+
+.card:hover {
+  color: var(--white);
+
+  background-color: var(--orange);
+}
+
+.card:hover h3 { /* почему p наследует hover, а h3 нет? */
+  color: var(--white);
+}
+
+.numbers {
+  font-size: 64px;
+  font-family: Neucha, cursive;
+  line-height: 1;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
 }
