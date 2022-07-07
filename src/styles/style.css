@@ -90,8 +90,20 @@ h4 {
   margin-top: 200px;
 }
 
+.mb-n-100 {
+  margin-bottom: -100px;
+}
+
 .py-100 {
   padding: 100px 0;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.text-c {
+  text-align: center;
 }
 
 /* context */
@@ -158,11 +170,4 @@ header {
 
 .details:hover {
   background-color: var(--orange-hover);
-}
-
-.displacement {
-  position: relative;
-  top: 100px;
-
-  text-align: center;
 }
