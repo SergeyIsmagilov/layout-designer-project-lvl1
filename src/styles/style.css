@@ -60,8 +60,8 @@ h3 {
 h4 {
   font-weight: 700;
   font-size: 14px;
-  font-family: Neucha, cursive;
   line-height: 1.2em;
+  text-transform: uppercase;
 }
 
 a {
@@ -103,6 +103,10 @@ a {
   color: var(--white);
 }
 
+.color-dark-half { /* может, назвать переменную darkhalf, чтобы название класса было с одним дефисом? */
+  color: var(--dark-half);
+}
+
 .mt-12 {
   margin-top: 12px;
 }
@@ -111,8 +115,12 @@ a {
   margin-top: 15px;
 }
 
-.mt-30 {
-  margin-top: 30px;
+.my-30 {
+  margin: 30px 0;
+}
+
+.mt-100 {
+  margin-top: 100px;
 }
 
 .mt-200 {
@@ -121,6 +129,20 @@ a {
 
 .mb-n-100 {
   margin-bottom: -100px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.px-10 {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .py-100 {
@@ -145,6 +167,10 @@ a {
 
 .width-350 {
   width: 350px;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-center {
@@ -186,6 +212,17 @@ a {
   background-color: var(--main-dark);
 }
 
+.bg-brown {
+  background-color: var(--brown);
+}
+
+.columns-top {
+  display: flex;
+
+  columns: 2;
+  column-gap: 30px;
+}
+
 .columns-bottom {
   columns: 2;
   column-gap: 30px;
@@ -206,6 +243,18 @@ header {
   z-index: -10;
 
   height: 525px;
+}
+
+.h0 { /* как бы ты назвал класс для такого псевдозаголока? */
+  font-size: 24px;
+  font-family: Neucha, cursive;
+  line-height: 1.2em;
+}
+
+.p-neucha { /* а для параграфа со свойствами заголовка? */
+  font-size: 34px;
+  font-family: Neucha, cursive;
+  line-height: 1.2em;
 }
 
 .details {
