@@ -235,8 +235,8 @@ header {
   background-color: var(--orange);
 }
 
-.card:hover h3 { /* почему p наследует hover, а h3 нет? */
-  color: var(--white);
+.card:hover h3 {
+  color: currentColor;
 }
 
 .numbers {
