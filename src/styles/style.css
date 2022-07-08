@@ -78,8 +78,12 @@ h4 {
   flex-wrap: wrap;
 }
 
-.gap-20-30 {
-  gap: 20px 30px;
+.gap-x-20 {
+  row-gap: 20px;
+}
+
+.gap-y-30 {
+  column-gap: 30px;
 }
 
 .drop-shadow {
