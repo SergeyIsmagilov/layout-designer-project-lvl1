@@ -189,6 +189,10 @@ a {
   font-size: 24px;
 }
 
+.text-34 {
+  font-size: 34px;
+}
+
 .text-52 {
   font-size: 52px;
 }
@@ -252,12 +256,6 @@ header {
   z-index: -10;
 
   height: 525px;
-}
-
-.p-neucha { /* а для параграфа со свойствами заголовка? */
-  font-size: 34px;
-  font-family: Neucha, cursive;
-  line-height: 1.2em;
 }
 
 .details {
