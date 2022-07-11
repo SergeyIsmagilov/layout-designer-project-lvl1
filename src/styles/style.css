@@ -2,12 +2,12 @@
 
 :root {
   --white: #fff;
-  --white-half: #d7ccc0;
+  --semi-white: #d7ccc0;
   --light: #f5f4f0;
   --orange: #fe8a02;
   --main-dark: #42413c;
   --main-black: #2a2626;
-  --dark-half: #908d8b;
+  --semi-dark: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
   --orange-hover: #ea7600;
@@ -103,8 +103,8 @@ a {
   color: var(--white);
 }
 
-.color-dark-half { /* может, назвать переменную darkhalf, чтобы название класса было с одним дефисом? */
-  color: var(--dark-half);
+.color-semi-dark {
+  color: var(--semi-dark);
 }
 
 .mt-12 {
