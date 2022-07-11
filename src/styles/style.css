@@ -83,11 +83,15 @@ a {
   flex-wrap: wrap;
 }
 
-.gap-x-20 {
+.columns-2 {
+  columns: 2;
+}
+
+.gap-y-20 {
   row-gap: 20px;
 }
 
-.gap-y-30 {
+.gap-x-30 {
   column-gap: 30px;
 }
 
@@ -214,13 +218,6 @@ a {
 
 .bg-brown {
   background-color: var(--brown);
-}
-
-.columns-top {
-  display: flex;
-
-  columns: 2;
-  column-gap: 30px;
 }
 
 .columns-bottom {
