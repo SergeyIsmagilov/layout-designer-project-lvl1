@@ -181,8 +181,20 @@ a {
   text-align: center;
 }
 
-.font-52 {
+.font-neucha {
+  font-family: Neucha, cursive;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+.text-52 {
   font-size: 52px;
+}
+
+.leading-12 {
+  line-height: 1.2em;
 }
 
 /* context */
@@ -240,12 +252,6 @@ header {
   z-index: -10;
 
   height: 525px;
-}
-
-.h0 { /* как бы ты назвал класс для такого псевдозаголока? */
-  font-size: 24px;
-  font-family: Neucha, cursive;
-  line-height: 1.2em;
 }
 
 .p-neucha { /* а для параграфа со свойствами заголовка? */
