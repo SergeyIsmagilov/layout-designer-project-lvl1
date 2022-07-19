@@ -39,7 +39,6 @@ body {
 h1,
 h2,
 h3 {
-  color: var(--orange);
   font-weight: 400;
   font-family: Neucha, cursive;
   line-height: 1.2em;
@@ -101,6 +100,10 @@ a {
 
 .color-main {
   color: var(--main-black);
+}
+
+.color-orange {
+  color: var(--orange);
 }
 
 .color-white {
