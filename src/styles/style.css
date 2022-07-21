@@ -11,6 +11,7 @@
   --brown: #b09a81;
   --blue: #1085c5;
   --orange-hover: #ea7600;
+  --brown-rgb: 176 154 129;
 }
 
 @font-face {
@@ -219,49 +220,16 @@ a {
   margin: 0 auto;
 }
 
-.bg-light {
-  position: relative;
-}
-
-.bg-light::before {
-  position: absolute;
-  z-index: -100;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--brown);
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.1;
-
-  content: "";
-}
-
 .bg-brown {
-  position: relative;
-}
-
-.bg-brown::before {
-  position: absolute;
-  z-index: -100;
-
-  width: 100%;
-  height: 100%;
-
   background-color: var(--brown);
-
-  content: "";
 }
 
-.bg-image {
-  position: relative;
+.bg-brown-10 {
+  background-color: rgba(var(--brown-rgb) / 10%);
 }
 
 .bg-image::before {
   position: absolute;
-  z-index: -10;
 
   width: 100%;
   height: 100%;
@@ -279,11 +247,7 @@ a {
   background-color: var(--main-dark);
 }
 
-.bg-brown-small {
-  background-color: var(--brown);
-}
-
-.bg-white-small {
+.bg-white {
   background-color: var(--white);
 }
 
@@ -304,7 +268,6 @@ header {
   position: absolute;
   top: 55px;
   right: -270px;
-  z-index: -1;
 
   height: 525px;
 }
