@@ -74,12 +74,20 @@ h4 {
   display: flex;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
 
 .flex-grow-1 {
   flex-grow: 1;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .overflow-hidden {
@@ -94,12 +102,24 @@ h4 {
   columns: 2;
 }
 
+.gap-y-14 {
+  row-gap: 14px;
+}
+
 .gap-y-20 {
   row-gap: 20px;
 }
 
+.gap-y-55 {
+  row-gap: 55px;
+}
+
 .gap-x-30 {
   column-gap: 30px;
+}
+
+.gap-x-90 {
+  column-gap: 90px;
 }
 
 .drop-shadow {
@@ -218,6 +238,11 @@ h4 {
 .py-5 {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.py-14 {
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .py-100 {
@@ -383,29 +408,4 @@ h4 {
 
 .send:hover::before {
   background-color: var(--orange-hover);
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.gap-y-55 {
-  row-gap: 55px;
-}
-
-.gap-y-14 {
-  row-gap: 14px;
-}
-
-.py-14 {
-  padding-top: 14px;
-  padding-bottom: 14px;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.gap-x-90 {
-  column-gap: 90px;
 }
