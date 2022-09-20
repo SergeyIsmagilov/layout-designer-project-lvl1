@@ -64,11 +64,6 @@ h4 {
   text-transform: uppercase;
 }
 
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
 /* utils */
 
 .relative {
@@ -81,6 +76,18 @@ a {
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.break-inside-avoid {
+  break-inside: avoid;
 }
 
 .columns-2 {
@@ -123,6 +130,22 @@ a {
   color: var(--semi-white);
 }
 
+.bg-brown {
+  background-color: var(--brown);
+}
+
+.bg-brown-10 {
+  background-color: rgba(var(--brown-rgb) / 10%);
+}
+
+.bg-dark {
+  background-color: var(--main-dark);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
 .mt-12 {
   margin-top: 12px;
 }
@@ -131,8 +154,12 @@ a {
   margin-top: 15px;
 }
 
-.my-30 {
-  margin: 30px 0;
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
 }
 
 .mt-100 {
@@ -143,26 +170,28 @@ a {
   margin-top: 200px;
 }
 
+.mr-55 {
+  margin-right: 55px;
+}
+
 .mb-n-100 {
   margin-bottom: -100px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
 }
 
 .mb-20 {
   margin-bottom: 20px;
 }
 
-.py-5 {
-  padding-top: 5px;
-  padding-bottom: 5px;
+.my-30 {
+  margin: 30px 0;
 }
 
-.px-10 {
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.py-100 {
-  padding: 100px 0;
+.m-55 {
+  margin: 55px;
 }
 
 .pt-100 {
@@ -181,6 +210,28 @@ a {
   padding-bottom: 100px;
 }
 
+.px-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.py-100 {
+  padding: 100px 0;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.border-0 {
+  border: 0;
+}
+
 .width-350 {
   width: 350px;
 }
@@ -195,6 +246,18 @@ a {
 
 .font-neucha {
   font-family: Neucha, cursive;
+}
+
+.text-12 {
+  font-size: 12px;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.text-18 {
+  font-size: 18px;
 }
 
 .text-24 {
@@ -213,19 +276,15 @@ a {
   line-height: 1.2em;
 }
 
+.leading-16 {
+  line-height: 1.6em;
+}
+
 /* context */
 
 .container {
   max-width: 1110px;
   margin: 0 auto;
-}
-
-.bg-brown {
-  background-color: var(--brown);
-}
-
-.bg-brown-10 {
-  background-color: rgba(var(--brown-rgb) / 10%);
 }
 
 .bg-image::before {
@@ -243,33 +302,17 @@ a {
   content: "";
 }
 
-.bg-dark {
-  background-color: var(--main-dark);
-}
-
-.bg-white {
-  background-color: var(--white);
-}
-
-.columns-bottom {
-  columns: 2;
-  column-gap: 30px;
-}
-
-.columns-bottom > div {
-  break-inside: avoid;
-}
-
-header {
-  overflow: hidden;
-}
-
 .img-header {
   position: absolute;
   top: 55px;
   right: -270px;
 
   height: 525px;
+}
+
+.links {
+  color: currentcolor;
+  text-decoration: none;
 }
 
 .details {
@@ -280,7 +323,6 @@ header {
   color: var(--white);
   font-weight: 700;
   text-transform: uppercase;
-  text-decoration: none;
 
   background-color: var(--orange);
 }
@@ -307,11 +349,63 @@ header {
 }
 
 .card:hover h3 {
-  color: currentColor;
+  color: currentcolor;
 }
 
 .numbers {
   font-size: 64px;
   font-family: Neucha, cursive;
   line-height: 1;
+}
+
+.send {
+  width: 70px;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+.send::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--orange);
+  background-image: url("../images/send.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  content: "";
+}
+
+.send:hover::before {
+  background-color: var(--orange-hover);
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-y-55 {
+  row-gap: 55px;
+}
+
+.gap-y-14 {
+  row-gap: 14px;
+}
+
+.py-14 {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-x-90 {
+  column-gap: 90px;
 }
