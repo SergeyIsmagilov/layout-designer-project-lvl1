@@ -311,7 +311,7 @@ h4 {
 }
 
 .links {
-  color: currentColor;
+  color: currentcolor;
   text-decoration: none;
 }
 
@@ -349,7 +349,7 @@ h4 {
 }
 
 .card:hover h3 {
-  color: currentColor;
+  color: currentcolor;
 }
 
 .numbers {
