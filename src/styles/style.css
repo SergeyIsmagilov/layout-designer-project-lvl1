@@ -126,6 +126,10 @@ h4 {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
+.color-current {
+  color: currentcolor;
+}
+
 .color-main {
   color: var(--main-black);
 }
@@ -206,6 +210,10 @@ h4 {
   margin-bottom: 20px;
 }
 
+.mx-auto {
+  margin: 0 auto;
+}
+
 .my-30 {
   margin: 30px 0;
 }
@@ -273,6 +281,10 @@ h4 {
   font-family: Neucha, cursive;
 }
 
+.decoration-none {
+  text-decoration: none;
+}
+
 .text-12 {
   font-size: 12px;
 }
@@ -305,12 +317,32 @@ h4 {
   line-height: 1.6em;
 }
 
-/* context */
+/* context? */
+
+/*
+перепишу эти классы в утилитарные, оставив новые классы под старыми
+дам Денису посмотреть, нравится ли ему то, как они выглядят
+вместе примем решение, стоит ли заменять ими контекстные классы
+*/
+
+/* --- */
 
 .container {
   max-width: 1110px;
   margin: 0 auto;
 }
+
+.max-width-1110 {
+  max-width: 1110px;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+/* --- */
+
+/* --- */
 
 .bg-image::before {
   position: absolute;
@@ -327,6 +359,42 @@ h4 {
   content: "";
 }
 
+.absolute-before::before {
+  position: absolute;
+}
+
+.width-100p::before { /* проценты? */
+  width: 100%;
+}
+
+.height-100p::before {
+  height: 100%;
+}
+
+.bg-url-background::before {
+  background-image: url("../images/background.png");
+}
+
+.bg-no-repeat::before {
+  background-repeat: no-repeat;
+}
+
+.bg-cover::before {
+  background-size: cover;
+}
+
+.opacity-10p::before {
+  opacity: 0.1;
+}
+
+.content::before {
+  content: "";
+}
+
+/* --- */
+
+/* --- */
+
 .img-header {
   position: absolute;
   top: 55px;
@@ -335,10 +403,23 @@ h4 {
   height: 525px;
 }
 
-.links {
-  color: currentcolor;
-  text-decoration: none;
+.absolute {
+  position: absolute;
 }
+
+.pos-t-55 { /* p-top? просто top? нужно как-то отличать от padding */
+  top: 55px;
+}
+
+.right-n-270 {
+  right: -270px;
+}
+
+.height-525 {
+  height: 525px;
+}
+
+/* --- */
 
 .details {
   display: inline-block;
