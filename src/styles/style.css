@@ -309,11 +309,11 @@ h4 {
   font-size: 52px;
 }
 
-.leading-12 {
+.leading-120 {
   line-height: 1.2em;
 }
 
-.leading-16 {
+.leading-160 {
   line-height: 1.6em;
 }
 
@@ -359,35 +359,35 @@ h4 {
   content: "";
 }
 
-.absolute-before::before {
+.before-absolute::before {
   position: absolute;
 }
 
-.w-full-before::before {
+.before-w-full::before {
   width: 100%;
 }
 
-.h-full-before::before {
+.before-h-full::before {
   height: 100%;
 }
 
-.bg-url-background-before::before {
+.before-bg-url-background::before {
   background-image: url("../images/background.png");
 }
 
-.bg-no-repeat-before::before {
+.before-bg-no-repeat::before {
   background-repeat: no-repeat;
 }
 
-.bg-cover-before::before {
+.before-bg-cover::before {
   background-size: cover;
 }
 
-.opacity-10-before::before {
+.before-opacity-10::before {
   opacity: 0.1;
 }
 
-.content-before::before {
+.before-content::before {
   content: "";
 }
 
@@ -477,7 +477,7 @@ h4 {
   background-color: var(--orange-h);
 }
 
-.bg-orange-h-hover:hover {
+.hover-bg-orange-h:hover {
   background-color: var(--orange-h);
 }
 
@@ -526,11 +526,11 @@ h4 {
   background-color: var(--orange);
 }
 
-.color-white-hover:hover {
+.hover-color-white:hover {
   color: var(--white);
 }
 
-.bg-orange-hover:hover {
+.hover-bg-orange:hover {
   background-color: var(--orange);
 }
 
@@ -542,7 +542,7 @@ h4 {
   color: currentcolor;
 }
 
-.color-current-hover:hover h3 {
+.hover-color-current:hover h3 {
   color: currentcolor;
 }
 
@@ -564,7 +564,7 @@ h4 {
   font-family: Neucha, cursive;
 }
 
-.leading-10 { /* leading-10 или leading-1? */
+.leading-100 {
   line-height: 1;
 }
 
@@ -611,43 +611,43 @@ h4 {
   content: "";
 }
 
-.absolute-before::before {
+.before-absolute::before {
   position: absolute;
 }
 
-.top-0-before::before {
+.before-top-0::before {
   top: 0;
 }
 
-.left-0-before::before {
+.before-left-0::before {
   left: 0;
 }
 
-.w-full-before::before {
+.before-w-full::before {
   width: 100%;
 }
 
-.h-full-before::before {
+.before-h-full::before {
   height: 100%;
 }
 
-.bg-orange-before::before {
+.before-bg-orange::before {
   background-color: var(--orange);
 }
 
-.bg-url-send-before::before {
+.before-bg-url-send::before {
   background-image: url("../images/send.svg");
 }
 
-.bg-no-repeat-before::before {
+.before-bg-no-repeat::before {
   background-repeat: no-repeat;
 }
 
-.bg-center-before::before {
+.before-bg-center::before {
   background-position: center;
 }
 
-.content-before::before {
+.before-content::before {
   content: "";
 }
 
@@ -659,7 +659,7 @@ h4 {
   background-color: var(--orange-h);
 }
 
-.bg-orange-h-hover-before:hover::before {
+.hover-before-bg-orange-h:hover::before {
   background-color: var(--orange-h);
 }
 
