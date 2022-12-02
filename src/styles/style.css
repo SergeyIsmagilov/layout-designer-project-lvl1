@@ -10,7 +10,7 @@
   --semi-dark: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
-  --orange-hover: #ea7600;
+  --orange-h: #ea7600;
   --brown-rgb: 176 154 129;
 }
 
@@ -265,7 +265,7 @@ h4 {
   border: 0;
 }
 
-.width-350 {
+.w-350 {
   width: 350px;
 }
 
@@ -332,7 +332,7 @@ h4 {
   margin: 0 auto;
 }
 
-.max-width-1110 {
+.max-w-1110 {
   max-width: 1110px;
 }
 
@@ -363,31 +363,31 @@ h4 {
   position: absolute;
 }
 
-.width-100p::before { /* проценты? */
+.w-full-before::before {
   width: 100%;
 }
 
-.height-100p::before {
+.h-full-before::before {
   height: 100%;
 }
 
-.bg-url-background::before {
+.bg-url-background-before::before {
   background-image: url("../images/background.png");
 }
 
-.bg-no-repeat::before {
+.bg-no-repeat-before::before {
   background-repeat: no-repeat;
 }
 
-.bg-cover::before {
+.bg-cover-before::before {
   background-size: cover;
 }
 
-.opacity-10p::before {
+.opacity-10-before::before {
   opacity: 0.1;
 }
 
-.content::before {
+.content-before::before {
   content: "";
 }
 
@@ -407,7 +407,7 @@ h4 {
   position: absolute;
 }
 
-.pos-t-55 { /* p-top? просто top? нужно как-то отличать от padding */
+.top-55 {
   top: 55px;
 }
 
@@ -415,9 +415,11 @@ h4 {
   right: -270px;
 }
 
-.height-525 {
+.h-525 {
   height: 525px;
 }
+
+/* --- */
 
 /* --- */
 
@@ -433,9 +435,55 @@ h4 {
   background-color: var(--orange);
 }
 
-.details:hover {
-  background-color: var(--orange-hover);
+.inline-block {
+  display: inline-block;
 }
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.px-24 {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.color-white {
+  color: var(--white);
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+/* --- */
+
+/* --- */
+
+.details:hover {
+  background-color: var(--orange-h);
+}
+
+.bg-orange-h-hover:hover {
+  background-color: var(--orange-h);
+}
+
+/* --- */
+
+/* --- */
 
 .card {
   position: relative;
@@ -445,8 +493,32 @@ h4 {
   width: 302px;
   padding: 24px;
 
-  background: var(--light);
+  background-color: var(--light);
 }
+
+.relative {
+  position: relative;
+}
+
+.block {
+  display: block;
+}
+
+.w-302 {
+  width: 302px;
+}
+
+.p-24 {
+  padding: 24px;
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+/* --- */
+
+/* --- */
 
 .card:hover {
   color: var(--white);
@@ -454,9 +526,29 @@ h4 {
   background-color: var(--orange);
 }
 
+.color-white-hover:hover {
+  color: var(--white);
+}
+
+.bg-orange-hover:hover {
+  background-color: var(--orange);
+}
+
+/* --- */
+
+/* --- */
+
 .card:hover h3 {
   color: currentcolor;
 }
+
+.color-current-hover:hover h3 {
+  color: currentcolor;
+}
+
+/* --- */
+
+/* --- */
 
 .numbers {
   font-size: 64px;
@@ -464,12 +556,44 @@ h4 {
   line-height: 1;
 }
 
+.text-64 {
+  font-size: 64px;
+}
+
+.font-neucha {
+  font-family: Neucha, cursive;
+}
+
+.leading-10 { /* leading-10 или leading-1? */
+  line-height: 1;
+}
+
+/* --- */
+
+/* --- */
+
 .send {
   width: 70px;
   height: 50px;
 
   cursor: pointer;
 }
+
+.w-70 {
+  width: 70px;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* --- */
+
+/* --- */
 
 .send::before {
   position: absolute;
@@ -487,6 +611,56 @@ h4 {
   content: "";
 }
 
-.send:hover::before {
-  background-color: var(--orange-hover);
+.absolute-before::before {
+  position: absolute;
 }
+
+.top-0-before::before {
+  top: 0;
+}
+
+.left-0-before::before {
+  left: 0;
+}
+
+.w-full-before::before {
+  width: 100%;
+}
+
+.h-full-before::before {
+  height: 100%;
+}
+
+.bg-orange-before::before {
+  background-color: var(--orange);
+}
+
+.bg-url-send-before::before {
+  background-image: url("../images/send.svg");
+}
+
+.bg-no-repeat-before::before {
+  background-repeat: no-repeat;
+}
+
+.bg-center-before::before {
+  background-position: center;
+}
+
+.content-before::before {
+  content: "";
+}
+
+/* --- */
+
+/* --- */
+
+.send:hover::before {
+  background-color: var(--orange-h);
+}
+
+.bg-orange-h-hover-before:hover::before {
+  background-color: var(--orange-h);
+}
+
+/* --- */
