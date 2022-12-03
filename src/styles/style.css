@@ -70,6 +70,22 @@ h4 {
   position: relative;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.before-absolute::before {
+  position: absolute;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
@@ -126,6 +142,14 @@ h4 {
   filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
 }
 
+.before-opacity-10::before {
+  opacity: 0.1;
+}
+
+.before-content::before {
+  content: "";
+}
+
 .color-current {
   color: currentcolor;
 }
@@ -154,6 +178,14 @@ h4 {
   color: var(--semi-white);
 }
 
+.hover-color-current:hover h3 {
+  color: currentcolor;
+}
+
+.hover-color-white:hover {
+  color: var(--white);
+}
+
 .bg-brown {
   background-color: var(--brown);
 }
@@ -168,6 +200,50 @@ h4 {
 
 .bg-white {
   background-color: var(--white);
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.hover-bg-orange:hover {
+  background-color: var(--orange);
+}
+
+.hover-bg-orange-h:hover {
+  background-color: var(--orange-h);
+}
+
+.before-bg-orange::before {
+  background-color: var(--orange);
+}
+
+.hover-before-bg-orange-h:hover::before {
+  background-color: var(--orange-h);
+}
+
+.before-bg-url-background::before {
+  background-image: url("../images/background.png");
+}
+
+.before-bg-url-send::before {
+  background-image: url("../images/send.svg");
+}
+
+.before-bg-no-repeat::before {
+  background-repeat: no-repeat;
+}
+
+.before-bg-center::before {
+  background-position: center;
+}
+
+.before-bg-cover::before {
+  background-size: cover;
 }
 
 .mt-12 {
@@ -243,9 +319,19 @@ h4 {
   padding-left: 10px;
 }
 
+.px-24 {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
 .py-5 {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .py-14 {
@@ -261,12 +347,60 @@ h4 {
   padding: 15px;
 }
 
+.p-24 {
+  padding: 24px;
+}
+
 .border-0 {
   border: 0;
 }
 
+.top-55 {
+  top: 55px;
+}
+
+.before-top-0::before {
+  top: 0;
+}
+
+.right-n-270 {
+  right: -270px;
+}
+
+.before-left-0::before {
+  left: 0;
+}
+
+.max-w-1110 {
+  max-width: 1110px;
+}
+
+.w-70 {
+  width: 70px;
+}
+
+.w-302 {
+  width: 302px;
+}
+
 .w-350 {
   width: 350px;
+}
+
+.before-w-full::before {
+  width: 100%;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+.h-525 {
+  height: 525px;
+}
+
+.before-h-full::before {
+  height: 100%;
 }
 
 .align-middle {
@@ -281,8 +415,8 @@ h4 {
   font-family: Neucha, cursive;
 }
 
-.decoration-none {
-  text-decoration: none;
+.weight-700 {
+  font-weight: 700;
 }
 
 .text-12 {
@@ -309,6 +443,14 @@ h4 {
   font-size: 52px;
 }
 
+.text-64 {
+  font-size: 64px;
+}
+
+.leading-100 {
+  line-height: 1;
+}
+
 .leading-120 {
   line-height: 1.2em;
 }
@@ -317,350 +459,14 @@ h4 {
   line-height: 1.6em;
 }
 
-/* context? */
-
-/*
-перепишу эти классы в утилитарные, оставив новые классы под старыми
-дам Денису посмотреть, нравится ли ему то, как они выглядят
-вместе примем решение, стоит ли заменять ими контекстные классы
-*/
-
-/* --- */
-
-.container {
-  max-width: 1110px;
-  margin: 0 auto;
-}
-
-.max-w-1110 {
-  max-width: 1110px;
-}
-
-.mx-auto {
-  margin: 0 auto;
-}
-
-/* --- */
-
-/* --- */
-
-.bg-image::before {
-  position: absolute;
-
-  width: 100%;
-  height: 100%;
-
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  opacity: 0.1;
-
-  content: "";
-}
-
-.before-absolute::before {
-  position: absolute;
-}
-
-.before-w-full::before {
-  width: 100%;
-}
-
-.before-h-full::before {
-  height: 100%;
-}
-
-.before-bg-url-background::before {
-  background-image: url("../images/background.png");
-}
-
-.before-bg-no-repeat::before {
-  background-repeat: no-repeat;
-}
-
-.before-bg-cover::before {
-  background-size: cover;
-}
-
-.before-opacity-10::before {
-  opacity: 0.1;
-}
-
-.before-content::before {
-  content: "";
-}
-
-/* --- */
-
-/* --- */
-
-.img-header {
-  position: absolute;
-  top: 55px;
-  right: -270px;
-
-  height: 525px;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.top-55 {
-  top: 55px;
-}
-
-.right-n-270 {
-  right: -270px;
-}
-
-.h-525 {
-  height: 525px;
-}
-
-/* --- */
-
-/* --- */
-
-.details {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 24px;
-
-  color: var(--white);
-  font-weight: 700;
-  text-transform: uppercase;
-
-  background-color: var(--orange);
-}
-
-.inline-block {
-  display: inline-block;
-}
-
-.mt-40 {
-  margin-top: 40px;
-}
-
-.py-12 {
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.px-24 {
-  padding-right: 24px;
-  padding-left: 24px;
-}
-
-.color-white {
-  color: var(--white);
-}
-
-.weight-700 {
-  font-weight: 700;
-}
-
 .uppercase {
   text-transform: uppercase;
 }
 
-.bg-orange {
-  background-color: var(--orange);
-}
-
-/* --- */
-
-/* --- */
-
-.details:hover {
-  background-color: var(--orange-h);
-}
-
-.hover-bg-orange-h:hover {
-  background-color: var(--orange-h);
-}
-
-/* --- */
-
-/* --- */
-
-.card {
-  position: relative;
-
-  display: block;
-
-  width: 302px;
-  padding: 24px;
-
-  background-color: var(--light);
-}
-
-.relative {
-  position: relative;
-}
-
-.block {
-  display: block;
-}
-
-.w-302 {
-  width: 302px;
-}
-
-.p-24 {
-  padding: 24px;
-}
-
-.bg-light {
-  background-color: var(--light);
-}
-
-/* --- */
-
-/* --- */
-
-.card:hover {
-  color: var(--white);
-
-  background-color: var(--orange);
-}
-
-.hover-color-white:hover {
-  color: var(--white);
-}
-
-.hover-bg-orange:hover {
-  background-color: var(--orange);
-}
-
-/* --- */
-
-/* --- */
-
-.card:hover h3 {
-  color: currentcolor;
-}
-
-.hover-color-current:hover h3 {
-  color: currentcolor;
-}
-
-/* --- */
-
-/* --- */
-
-.numbers {
-  font-size: 64px;
-  font-family: Neucha, cursive;
-  line-height: 1;
-}
-
-.text-64 {
-  font-size: 64px;
-}
-
-.font-neucha {
-  font-family: Neucha, cursive;
-}
-
-.leading-100 {
-  line-height: 1;
-}
-
-/* --- */
-
-/* --- */
-
-.send {
-  width: 70px;
-  height: 50px;
-
-  cursor: pointer;
-}
-
-.w-70 {
-  width: 70px;
-}
-
-.h-50 {
-  height: 50px;
+.decoration-none {
+  text-decoration: none;
 }
 
 .pointer {
   cursor: pointer;
 }
-
-/* --- */
-
-/* --- */
-
-.send::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--orange);
-  background-image: url("../images/send.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  content: "";
-}
-
-.before-absolute::before {
-  position: absolute;
-}
-
-.before-top-0::before {
-  top: 0;
-}
-
-.before-left-0::before {
-  left: 0;
-}
-
-.before-w-full::before {
-  width: 100%;
-}
-
-.before-h-full::before {
-  height: 100%;
-}
-
-.before-bg-orange::before {
-  background-color: var(--orange);
-}
-
-.before-bg-url-send::before {
-  background-image: url("../images/send.svg");
-}
-
-.before-bg-no-repeat::before {
-  background-repeat: no-repeat;
-}
-
-.before-bg-center::before {
-  background-position: center;
-}
-
-.before-content::before {
-  content: "";
-}
-
-/* --- */
-
-/* --- */
-
-.send:hover::before {
-  background-color: var(--orange-h);
-}
-
-.hover-before-bg-orange-h:hover::before {
-  background-color: var(--orange-h);
-}
-
-/* --- */
