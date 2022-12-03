@@ -1,111 +1,48 @@
-/*
-В этой заметке я буду отслеживать свой прогресс понимания методологий OOCSS и Atomic CSS,
-которые необходимо использовать в рамках текущего проекта.
-Статус до начала разработки:
-Кажется, смысл в том, чтобы создать как можно больше переиспользуемых классов.
-Буквально для каждого используемого в проекте свойства.
-Upd: Сложно понять методологию, когда совсем нет опыта. Нужно "набить руку", посмотреть,
-как работают в компании, в которую я устроюсь. Я потрачу слишком много времени,
-если буду уделять этому особенно пристальное внимание. Пока буду записывать всё так,
-как мне сейчас кажется удобным.
-*/
-
-/* !Названия классов будут сокращены в будущем! */
+/* base */
 
 :root {
   --white: #fff;
-  --whitehalf: #d7ccc0;
+  --semi-white: #d7ccc0;
   --light: #f5f4f0;
-  --main: #fe8a02;
-  --maindark: #42413c;
-  --dark: #2a2626;
-  --darkhalf: #908d8b;
+  --orange: #fe8a02;
+  --main-dark: #42413c;
+  --main-black: #2a2626;
+  --semi-dark: #908d8b;
   --brown: #b09a81;
   --blue: #1085c5;
-  --hover: #ea7600;
+  --orange-h: #ea7600;
+  --brown-rgb: 176 154 129;
 }
-
-/* Свойства позиционирования */
-
-.position-relative {
-  position: relative;
-}
-
-.position-header-img {
-  position: absolute;
-  top: 55px;
-  right: -270px;
-  z-index: -10;
-
-  height: 525px;
-}
-
-/* Свойства, определяющие box-model */
-
-.padding-tb-100 {
-  padding: 100px 0;
-}
-
-.padding-tb-200-100 {
-  padding-top: 200px;
-  padding-bottom: 100px;
-}
-
-.max-width {
-  max-width: 1110px;
-}
-
-.margin-center {
-  margin: 0 auto;
-}
-
-.margin-0 { /* если обнулить внешние отступы по умолчанию, можно будет много откуда убрать этот класс */
-  margin: 0;
-}
-
-.margin-top-200 {
-  margin-top: 200px;
-}
-
-.margin-top-40 {
-  margin-top: 40px;
-}
-
-/* Свойства типографики */
 
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Neucha;
   src: url("../fonts/Neucha-Regular.ttf");
+  font-display: swap;
 }
 
-.font-main {
-  color: var(--dark);
+* {
+  margin: 0;
+}
+
+body {
+  color: var(--main-black);
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   line-height: 1.6em;
 }
 
-.font-head {
-  margin: 0;
-
-  font-weight: normal;
+h1,
+h2,
+h3 {
+  font-weight: 400;
   font-family: Neucha, cursive;
   line-height: 1.2em;
-}
-
-.p-neucha {
-  font-size: 34px;
-  font-family: Neucha, cursive;
-  line-height: 1.2em;
-}
-
-.h0 {
-  font-size: 24px;
 }
 
 h1 {
@@ -121,334 +58,415 @@ h3 {
 }
 
 h4 {
-  margin: 0;
-
+  font-weight: 700;
   font-size: 14px;
   line-height: 1.2em;
+  text-transform: uppercase;
 }
 
-/* Свойства, определяющие визуальный вид */
+/* utils */
 
-.bg {
+.relative {
   position: relative;
 }
 
-.bg::before {
+.absolute {
   position: absolute;
-  z-index: -100;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--brown);
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  opacity: 0.1;
-
-  content: "";
 }
 
-.bg-brown {
-  position: relative;
-}
-
-.bg-brown::before {
+.before-absolute::before {
   position: absolute;
-  z-index: -1000;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--brown);
-
-  content: "";
 }
 
-.bg-image {
-  position: relative;
+.block {
+  display: block;
 }
 
-.bg-image::before {
-  position: absolute;
-  z-index: -100;
-
-  width: 100%;
-  height: 100%;
-
-  background-image: url("../images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  opacity: 0.1;
-
-  content: "";
+.inline-block {
+  display: inline-block;
 }
 
-/* bg-brown? */
+.flex {
+  display: flex;
+}
 
-/* Свойства анимации */
+.flex-col {
+  flex-direction: column;
+}
 
-/* Свойства, не попавшие ни в одну категорию */
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.justify-center {
+  justify-content: center;
+}
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.button {
-  display: inline-block;
-  padding: 12px 24px;
-
-  color: var(--white);
-  font-weight: bold;
-  text-decoration: none;
-
-  background-color: var(--main);
-}
-
-.button:hover {
-  background-color: var(--hover);
-}
-
-.color-head {
-  color: var(--main);
-}
-
-.margin-tb-30 { /* заменить на "margin-top: 30px;"? */
-  margin: 30px 0;
-}
-
-.margin-top-30 { /* а если по умолчанию обнулить внешние отступы? */
-  margin: 30px 0 0;
-}
-
-.margin-top-15-0-0 {
-  margin: 15px 0 0;
-}
-
-.margin-top-70 {
-  margin: 70px 0 0;
-}
-
-.margin-bottom-40 {
-  margin-bottom: 40px;
-}
-
-iframe {
-  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
-}
-
-.displacement-container {
-  position: relative;
-  top: 100px;
-
-  text-align: center;
-}
-
-.background {
-  background-color: var(--maindark);
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px 30px;
-}
-
-.card-head {
-  font-size: 52px;
-}
-
-.color-white {
-  color: var(--white);
-}
-
-.card-background {
-  background: var(--light);
-}
-
-.card-width {
-  position: relative;
-
-  width: 302px;
-  padding: 24px;
-}
-
-.numbers {
-  margin: 0;
-  padding-bottom: 40px;
-
-  font-weight: normal;
-  font-size: 64px;
-  font-family: Neucha, cursive;
-  line-height: 1;
-}
-
-.card-header {
-  width: 350px;
-}
-
-.card-p {
-  margin: 12px 0 0;
-}
-
-.text-decoration {
-  text-decoration: none;
-}
-
-.fill {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  display: block;
-
-  width: 100%;
-  height: 100%;
-}
-
-.card-width:hover {
-  color: var(--white);
-
-  background-color: var(--main);
-}
-
-.card-width:hover h3 {
-  color: var(--white);
-}
-
-.columns {
-  columns: 2;
-  column-gap: 30px;
-}
-
-.vertical-align-middle {
-  vertical-align: middle;
-}
-
-.display-flex {
-  display: flex;
-}
-
-.drop-shadow {
-  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
-}
-
-.background-brown {
-  background-color: var(--brown);
-}
-
-.margin-t-100-b-20 {
-  margin-top: 100px;
-  margin-bottom: 20px;
-}
-
-.padding-5-10 {
-  padding: 5px 10px;
-}
-
-.color-darkhalf { /* раз уж цвет в переменной, дать название классу, отображающее объект, у которого он меняется? */
-  color: var(--darkhalf);
-}
-
-.color-whitehalf {
-  color: var(--whitehalf);
-}
-
-.color-brown {
-  color: var(--brown);
-}
-
-.background-white {
-  background-color: var(--white);
-}
-
-.text-align-center {
-  font-size: 14px;
-  text-align: center;
-}
-
-.background-maindark {
-  background-color: var(--maindark);
-}
-
-.send {
-  position: relative;
-
-  width: 70px;
-  height: 50px;
-
-  cursor: pointer;
-}
-
-.send::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: var(--main);
-  background-image: url("../images/send.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-
-  /* background-size: contain; */
-
-  content: "";
-}
-
-.send:hover::before {
-  background-color: var(--hover);
-}
-
-.font-size-18 {
-  font-size: 18px;
-  line-height: 1.6em;
-}
-
-.input {
-  flex-grow: 1; /* ??? */
-  height: 20px;
-  padding: 15px;
-}
-
-.border-0 {
-  border: 0;
-}
-
-.footer-flex {
-  display: flex;
-
-  /*  align-items: center; */
-
-  justify-content: space-between; /* space-evenly? */
-}
-
-.form-flex {
-  display: flex;
-}
-
-.margin-55 {
-  margin: 55px;
-}
-
-.email-form {
-  width: 485px;
-  margin-right: 55px;
-}
-
-.font-size-12 {
-  font-size: 12px;
 }
 
 .break-inside-avoid {
   break-inside: avoid;
 }
 
-.margin-top-38-bottom-9 {
-  margin-top: 38px;
-  margin-bottom: 9px;
+.columns-2 {
+  columns: 2;
+}
+
+.gap-y-14 {
+  row-gap: 14px;
+}
+
+.gap-y-20 {
+  row-gap: 20px;
+}
+
+.gap-y-55 {
+  row-gap: 55px;
+}
+
+.gap-x-30 {
+  column-gap: 30px;
+}
+
+.gap-x-90 {
+  column-gap: 90px;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 16px 32px rgba(0 0 0 / 15%));
+}
+
+.before-opacity-10::before {
+  opacity: 0.1;
+}
+
+.before-content::before {
+  content: "";
+}
+
+.color-current {
+  color: currentcolor;
+}
+
+.color-main {
+  color: var(--main-black);
+}
+
+.color-orange {
+  color: var(--orange);
+}
+
+.color-white {
+  color: var(--white);
+}
+
+.color-brown {
+  color: var(--brown);
+}
+
+.color-semi-dark {
+  color: var(--semi-dark);
+}
+
+.color-semi-white {
+  color: var(--semi-white);
+}
+
+.hover-color-current:hover h3 {
+  color: currentcolor;
+}
+
+.hover-color-white:hover {
+  color: var(--white);
+}
+
+.bg-brown {
+  background-color: var(--brown);
+}
+
+.bg-brown-10 {
+  background-color: rgba(var(--brown-rgb) / 10%);
+}
+
+.bg-dark {
+  background-color: var(--main-dark);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-orange {
+  background-color: var(--orange);
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.hover-bg-orange:hover {
+  background-color: var(--orange);
+}
+
+.hover-bg-orange-h:hover {
+  background-color: var(--orange-h);
+}
+
+.before-bg-orange::before {
+  background-color: var(--orange);
+}
+
+.hover-before-bg-orange-h:hover::before {
+  background-color: var(--orange-h);
+}
+
+.before-bg-url-background::before {
+  background-image: url("../images/background.png");
+}
+
+.before-bg-url-send::before {
+  background-image: url("../images/send.svg");
+}
+
+.before-bg-no-repeat::before {
+  background-repeat: no-repeat;
+}
+
+.before-bg-center::before {
+  background-position: center;
+}
+
+.before-bg-cover::before {
+  background-size: cover;
+}
+
+.mt-12 {
+  margin-top: 12px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.mt-200 {
+  margin-top: 200px;
+}
+
+.mr-55 {
+  margin-right: 55px;
+}
+
+.mb-n-100 {
+  margin-bottom: -100px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+
+.my-30 {
+  margin: 30px 0;
+}
+
+.m-55 {
+  margin: 55px;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+
+.pt-200 {
+  padding-top: 200px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pb-100 {
+  padding-bottom: 100px;
+}
+
+.px-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.px-24 {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.py-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.py-12 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.py-14 {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.py-100 {
+  padding: 100px 0;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.p-24 {
+  padding: 24px;
+}
+
+.border-0 {
+  border: 0;
+}
+
+.top-55 {
+  top: 55px;
+}
+
+.before-top-0::before {
+  top: 0;
+}
+
+.right-n-270 {
+  right: -270px;
+}
+
+.before-left-0::before {
+  left: 0;
+}
+
+.max-w-1110 {
+  max-width: 1110px;
+}
+
+.w-70 {
+  width: 70px;
+}
+
+.w-302 {
+  width: 302px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.before-w-full::before {
+  width: 100%;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+.h-525 {
+  height: 525px;
+}
+
+.before-h-full::before {
+  height: 100%;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-neucha {
+  font-family: Neucha, cursive;
+}
+
+.weight-700 {
+  font-weight: 700;
+}
+
+.text-12 {
+  font-size: 12px;
+}
+
+.text-14 {
+  font-size: 14px;
+}
+
+.text-18 {
+  font-size: 18px;
+}
+
+.text-24 {
+  font-size: 24px;
+}
+
+.text-34 {
+  font-size: 34px;
+}
+
+.text-52 {
+  font-size: 52px;
+}
+
+.text-64 {
+  font-size: 64px;
+}
+
+.leading-100 {
+  line-height: 1;
+}
+
+.leading-120 {
+  line-height: 1.2em;
+}
+
+.leading-160 {
+  line-height: 1.6em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.decoration-none {
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
 }
