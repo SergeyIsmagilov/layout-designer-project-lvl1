@@ -34,7 +34,7 @@ body {
   color: var(--main-black);
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.6em;
+  line-height: 26px;
 }
 
 h1,
@@ -112,6 +112,10 @@ h4 {
 
 .break-inside-avoid {
   break-inside: avoid;
+}
+
+.z-index-1 {
+  z-index: 1;
 }
 
 .columns-2 {
