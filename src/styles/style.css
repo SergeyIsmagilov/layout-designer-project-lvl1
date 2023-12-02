@@ -114,6 +114,10 @@ h4 {
   break-inside: avoid;
 }
 
+.z-index-1 {
+  z-index: 1;
+}
+
 .columns-2 {
   columns: 2;
 }
